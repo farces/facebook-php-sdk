@@ -451,12 +451,6 @@ abstract class BaseFacebook
           return $access_token;
         }
       }
-
-      // signed request states there's no access token, so anything
-      // stored should be cleared.
-      $this->clearAllPersistentData();
-      return false; // respect the signed request's data, even
-                    // if there's an authorization code or something else
     }
 
     $code = $this->getCode();
